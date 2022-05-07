@@ -1,0 +1,115 @@
+$color-background: #eaebea;
+$color-button-text: darksalmon;
+$color-button-shadow: rgb(161, 108, 90);
+$color-button-shadow-light: rgb(179, 120, 100);
+$color-button-active: #000000c9;
+$color-button-active-text: #f5eee4ad;
+$color-button-active-shadow: rgb(255, 255, 255);
+$color-black: black;
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: $color-background;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: $color-background;
+}
+
+.description {
+  @include flexCenter();
+  padding-top: 30px;
+}
+
+.textarea {
+  @include flexCenter();
+  padding: 30px 0;
+}
+
+.keyboard {
+  padding-bottom: 50px;
+}
+
+.line {
+  @include flexCenter();
+  gap: 4px;
+  padding: 2px;
+}
+
+.button {
+  @include flexCenter();
+  width: 50px;
+  height: 50px;
+  border: 1px solid;
+  border-radius: 5px;
+  box-shadow: 0px 2px 0 $color-button-shadow, 2px 4px 6px $color-button-shadow-light;
+  background: $color-black;
+  color: $color-button-text;
+  user-select: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.button-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.split-button {
+  @include flexCenter();
+  width: 50px;
+  height: 25px;
+  border: 1px solid;
+  background: $color-black;
+  color: $color-button-text;
+  border-radius: 5px;
+}
+
+.button_active {
+  background: $color-button-active;
+  color: $color-button-active-text;
+  box-shadow: 1px 1px 2px $color-button-active-shadow;
+}
+
+.button-med {
+  width: 77px;
+}
+
+.button-long {
+  width: 91px;
+}
+
+.button-shift {
+  width: 118px;
+}
+
+.button-space {
+  width: 262px;
+}
+
+.button-command {
+  width: 66px;
+}
+
+.button-func {
+  font-size: 12px;
+}
